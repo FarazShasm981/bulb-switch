@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/bulb off.png" alt="" id="off">
+        <img src="/bulb on.png" alt="" id="on" style="display: none;">
+
+        <button id="switch" onclick="trigger()">ON</button>
+    </div>
+    <script>
+        var btn = document.getElementById('switch');
+        var boff = document.getElementById('off');
+        var bon = document.getElementById('on')
+        function trigger() {
+            if (btn.innerText === "ON") {
+                Image.src = "bulb on.png"
+                bon.style.display = "inline"
+                boff.style.display = "none"
+                btn.innerText = "OFF"
+            }else{
+                Image.src = "/bulb off.png"
+                bon.style.display = "none"
+                btn.innerText = "ON"
+                boff.style.display = "inline"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
